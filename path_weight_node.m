@@ -1,0 +1,14 @@
+function[result]=path_weight_node(p,ind)
+n=1;
+found=false;
+while(n<=length(p.points)&&found==false)
+   if(ind==p.points(n).node)
+       result=p.points(n).weight;
+       found=true;
+   end
+   n=n+1;
+end
+if(found==false)
+    result=-1;
+end
+end
