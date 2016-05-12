@@ -1,5 +1,5 @@
 function[list_of_node_indexes]=neighbor_nodes(g,src_index)   %funcion que devuelve un vector con los indices de los nodos vecinos a otro nodo
-list_of_node_indexes(1)=[];    %creamos el vector
+list_of_node_indexes = [];    %creamos el vector
 if (src_index<=length(g.node))   %comprobamos que el indice de salida se corresponde con un nodo del vector de nodos
 n=1;
 m=1;

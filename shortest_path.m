@@ -7,6 +7,7 @@ p.points(1).node=nStart;
 p.points(1).weight=0;
 pts(1)=p;
 found=false;
+m=1;
 n=1;      
 if closest_node (g,a)==b
     found=true;
@@ -26,7 +27,7 @@ while (found==false)
         print_path(g,p);
     end
     V=neighbor_nodes(g,length(porDonde.points.node));   
-    if length(V)==0
+    if isempty(V)
         found=true;
         disp('no hay camino');
         porDonde=[];
@@ -69,7 +70,7 @@ m=1;
             m=m+1;
         end
     if encontrado==false
-      pts(length(pts)+1)=add_node_to_path(porDonde,V(n),cost);
+        pts(length(pts)+1)=add_node_to_path(porDonde,V(n),cost);
     end
     encontrado=false; 
     x=1;
