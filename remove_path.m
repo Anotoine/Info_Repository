@@ -1,4 +1,5 @@
 function pts2=remove_path(pts,ind)
+pts2=[];
 n=1;
 m=1;
 while m<=length(pts)
