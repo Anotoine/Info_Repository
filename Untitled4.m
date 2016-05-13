@@ -1,0 +1,9 @@
+g=create_graph;
+NP=read_navPoints;
+Airports=read_airports();
+Airports=locate_airports(Airports,NP);
+g=read_graph();
+d=direct_cost(g,34,32);
+disp(d)
+g=complete_graph(g,Airports);
+disp(g)

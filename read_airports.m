@@ -1,5 +1,5 @@
 function[Airports]=read_airports()
-[f,e]=fopen ('Airports.txt','r');          %open the file to be read
+[f,e]=fopen ('AirportsSmall.txt','r');          %open the file to be read
 if(f==-1)                                  %if there were an error opening then show the error
  disp(e)
  Airports=[];                              %and give Airports as a empty vector
