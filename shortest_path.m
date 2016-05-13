@@ -14,9 +14,6 @@ if closest_node (g,a)==b
     p.points(2).node=nStart;
     p.points(2).weight=direct_cost(g,a,b);
     porDonde=p;
-    if verbose==true
-    print_path(g,p);
-    end
 end
 while (found==false)      
     ind=path_minimun_weight(pts);
@@ -54,14 +51,14 @@ m=1;
     costeprevisto=result+cost;
     encontrado=false;
     m=1;
-        while m<=length(pts)&&encontrado==false
-            while x<=length(pts(m).points)&&encontrado==false
-                if V(n)==pts(m).points(x).node
-                    if costeprevisto<=pts(m).points(x).weight
-                        pts(m)=add_node_to_path(porDonde,V(n),cost);
-                        encontrado=true;
+        while m <= length(pts) && encontrado == false
+            while (x<=length(pts(m)))&&(encontrado==false)
+                if V(n)==pts{m}.points(x).node
+                    if costeprevisto <=pts(m).points(x).weight
+                        pts(m) = add_node_to_path(porDonde,V(n),cost);
+                        encontrado = true;
                     else
-                        encontrado=true;
+                        encontrado = true;
                     end
                 else
                 x=x+1;
@@ -70,7 +67,7 @@ m=1;
             m=m+1;
         end
     if encontrado==false
-        pts(length(pts)+1)=add_node_to_path(porDonde,V(n),cost);
+        pts{length(pts)+1}=add_node_to_path(porDonde,V(n),cost);
     end
     encontrado=false; 
     x=1;

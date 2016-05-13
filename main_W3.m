@@ -44,8 +44,9 @@ seg = create_segment(node_index(g,'G'),node_index(g,'F'),1);
 g = add_segment(g,seg);
 seg = create_segment(node_index(g,'G'),node_index(g,'H'),1);
 g = add_segment(g,seg);
+
 %Tgraph de la semana 1
 disp('------')
 
-p = shortest_path (g,'A','F',true);
-%print_path (g,p)
+p = shortest_path (g,'A','F',false);
+
