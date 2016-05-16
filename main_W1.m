@@ -27,15 +27,17 @@ s=create_segment(node_index(g,'B'),node_index(g,'C'),2);
 g=add_segment(g,s);
 s=create_segment(node_index(g,'B'),node_index(g,'G'),6);
 g=add_segment(g,s);
+
 %test some data from g
-a_index=node_index(g,'A');
-g_index=node_index(g,'F');
+a_index=node_index(g,'A');  
+g_index=node_index(g,'F');  
+
 c1=direct_cost(g,a_index,g_index);
-disp(c1);    % test incorrect (­1)
+disp(c1);                               % test incorrect (­1)
 b_index=node_index(g,'B');
 c2=direct_cost(g,b_index,g_index);      % test correct (6)
 disp(c2);
-N=neighbor_nodes(g,a_index);            % test [b, e, f] indexes
+N=neighbor_nodes(g,a_index);            % test [b, e, f] indexes [2 5 6]
 disp(N);
-cn=closest_node(g,a_index);             % test returns b_index
+cn=closest_node(g,a_index);             % test returns b_index (3)
 disp(cn);

@@ -3,7 +3,8 @@ NP=read_navPoints;
 Airports=read_airports();
 Airports=locate_airports(Airports,NP);
 g=read_graph();
-d=direct_cost(g,34,32);
-disp(d)
 g=complete_graph(g,Airports);
-disp(g)
+% disp(g)
+list_airports(g)
+%%map_shortestRoute(g,45,46)   %%Hace falta el Shortest_Route para que
+%%funcione

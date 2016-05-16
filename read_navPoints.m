@@ -1,5 +1,5 @@
 function[NP]=read_navPoints()
-[f,e]=fopen ('NavPointsSmall.txt','r');               %Open the file to read
+[f,e]=fopen ('NavPointsMedium.txt','r');         %Open the file to read
 if(f==-1)                                        %If there is any error he should be check
  disp(e);
  NP=[];                                          %and return an empty NP vector

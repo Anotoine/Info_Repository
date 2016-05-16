@@ -1,5 +1,5 @@
 function [g] = read_graph()
-f = fopen('SegmentsSmall.txt','r');
+f = fopen('SegmentsMedium.txt','r');
 NP = read_navPoints();
 n = 1;
 while n <= length(NP)  %TnavPoint=struct('identifier',0,'nameprocedures','','latitude',0,'longitude',0);
